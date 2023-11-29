@@ -3,11 +3,115 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Weather</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://kit.fontawesome.com/5dc87e2c0a.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,600;1,400;1,600&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="src/style.css" />
+    <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
   </head>
   <body>
-    <h1>Hello Git</h1>
+    <div class="container">
+      <div class="weather">
+        <div class="row">
+          <form class="search-form" id="search-form">
+            <div class="row">
+              <div class="col-9">
+                <input
+                  type="search"
+                  class="form-control"
+                  autocomplete="off"
+                  placeholder="Enter town or city..."
+                  id="city-input"
+                />
+              </div>
+              <div class="col-3">
+                <button type="submit" class="btn btn-primary">Search</button>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="row">
+          <div id="current-date"></div>
+          <hr />
+        </div>
+        <div class="row">
+          <div class="col-6">
+            <h1 class="current-temp">24°C</h1>
+            <h2>Sunny and light winds</h2>
+          </div>
+          <div class="col-6">
+            <ul>
+              <li>Humidity: 61%</li>
+              <li>Visibility: Good</li>
+              <li>Temperature feels like <strong>25°C</strong></li>
+              <li>Precipitation not expected</li>
+              <li>Light winds from west/south west</li>
+            </ul>
+          </div>
+        </div>
+        <div class="row">
+          <div class="colCity">
+            <span id="current-location">Cambridge</span>
+          </div>
+          <hr />
+        </div>
+        <div class="forcast">
+          <div class="days">
+            <div class="row">
+              <div class="col">Wednesday</div>
+              <div class="col">Thursday</div>
+              <div class="col">Friday</div>
+              <div class="col">Saturday</div>
+              <div class="col">Sunday</div>
+            </div>
+          </div>
+
+          <div class="icon">
+            <div class="row">
+              <div class="col"><i class="fa-solid fa-sun"></i></div>
+              <div class="col"><i class="fa-solid fa-sun"></i></div>
+              <div class="col"><i class="fa-solid fa-cloud-sun"></i></div>
+              <div class="col"><i class="fa-solid fa-cloud-rain"></i></div>
+              <div class="col"><i class="fa-solid fa-bolt"></i></div>
+            </div>
+          </div>
+          <div class="high">
+            <div class="row">
+              <div class="col">23°C</div>
+              <div class="col">23°C</div>
+              <div class="col">24°C</div>
+              <div class="col">21°C</div>
+              <div class="col">16°C</div>
+            </div>
+          </div>
+          <div class="low">
+            <div class="row">
+              <div class="col">13°C</div>
+              <div class="col">12°C</div>
+              <div class="col">14°C</div>
+              <div class="col">9°C</div>
+              <div class="col">12°C</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
+
   <script src="src/script.js"></script>
 </html>

@@ -1,0 +1,97 @@
+body {
+  background: rgb(233, 233, 240);
+  background: linear-gradient(
+    130deg,
+    rgba(233, 233, 240, 1) 6%,
+    rgba(186, 186, 228, 1) 93%
+  );
+  font-family: "Raleway", sans-serif;
+  color: #43454e;
+  background-attachment: fixed;
+}
+h1 {
+  font-size: 88px;
+  font-weight: 600;
+  color: #555866;
+}
+h2 {
+  font-size: 22px;
+}
+
+ul {
+  text-align: right;
+  margin-top: 20px;
+  border-left: 1px solid #cecece;
+  padding: 10px 0;
+}
+
+li {
+  color: #585858;
+  font-size: 16px;
+  list-style: none;
+}
+
+.btn {
+  color: #ffffff;
+  background-color: #8f9ddf;
+  width: 100%;
+  border: 1px solid #8f9ddf;
+}
+.btn:hover {
+  background-color: #e9e9f0;
+  color: #8f9ddf;
+  cursor: pointer;
+  transition: all 500ms ease;
+  border: 1px solid #e9e9f0;
+}
+
+#current-date {
+  font-size: 26px;
+  text-align: center;
+  padding: 0 0 20px 0;
+}
+
+.weather {
+  max-width: 800px;
+  background-color: #ffffff;
+  margin: 100px auto;
+  padding: 40px;
+  border-radius: 30px;
+}
+
+.search-form {
+  margin-bottom: 30px;
+}
+
+.colCity {
+  text-align: right;
+  padding: 20px;
+  font-size: 34px;
+}
+
+.forcast {
+  padding: 0px;
+  text-align: center;
+}
+
+.days {
+  background-color: #e9e9f0;
+  padding: 5px;
+  border-radius: 6px;
+  font-weight: bold;
+}
+.icon {
+  text-align: center;
+  font-size: 48px;
+  opacity: 0.5;
+  padding: 10px 0px;
+  color: #8f9ddf;
+}
+
+.high {
+  font-weight: bold;
+}
+.low {
+  font-style: italic;
+  font-size: 14px;
+}
