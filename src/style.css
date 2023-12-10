@@ -13,7 +13,7 @@ a:hover {
 }
 
 .weather-container {
-  max-width: 600px;
+  max-width: 640px;
   margin: 30px auto;
   padding: 20px;
   border-radius: 10px;
@@ -32,7 +32,7 @@ a:hover {
   font-size: 12px;
   padding: 10px;
   border-radius: 10px;
-  width: 489px;
+  width: 529px;
 }
 
 .search-form-button {
@@ -126,6 +126,7 @@ a:hover {
   padding: 10px;
   border-radius: 10px;
   background-color: #484e5f;
+  width: 110px;
 }
 
 .weather-forecast-day:hover {
