@@ -9,7 +9,7 @@ a {
   color: #bf8240;
 }
 a:hover {
-  color: #1b7fb3;
+  color: #d4d5d9;
 }
 
 .weather-container {
@@ -112,7 +112,7 @@ a:hover {
 }
 
 .current-details strong {
-  color: #e7eaee;
+  color: #bf8240;
 }
 
 .forecast-container {
@@ -121,4 +121,58 @@ a:hover {
   padding: 20px;
   border-radius: 10px;
   opacity: 0.8;
+}
+
+.weather-forecast {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 30px;
+  font-size: 16px;
+}
+
+.weather-forecast-day {
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #484e5f;
+}
+
+.weather-forecast-day:hover {
+  background-color: #4d5563;
+  transition: all 500ms ease;
+}
+
+.weather-forecast-date {
+  text-align: center;
+  line-height: 20px;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+.weather-forecast-icon {
+  text-align: center;
+}
+
+.weather-forecast-icon img {
+  width: 74px;
+  height: 74px;
+}
+
+.forecast-temps {
+  text-align: center;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.weather-temp-max {
+  padding: 0 5px;
+  font-weight: 600;
+  color: #bf8240;
+}
+.weather-temp-min {
+  padding: 0 5px;
+  font-size: 14px;
+  color: #bf8240;
 }
