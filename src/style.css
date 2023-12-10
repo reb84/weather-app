@@ -115,14 +115,6 @@ a:hover {
   color: #bf8240;
 }
 
-.forecast-container {
-  background-color: #494e60;
-  margin: 20px auto;
-  padding: 20px;
-  border-radius: 10px;
-  opacity: 0.8;
-}
-
 .weather-forecast {
   display: flex;
   justify-content: space-around;
@@ -137,8 +129,8 @@ a:hover {
 }
 
 .weather-forecast-day:hover {
-  background-color: #4d5563;
   transition: all 500ms ease;
+  background-color: #52596c;
 }
 
 .weather-forecast-date {
@@ -150,13 +142,11 @@ a:hover {
   text-transform: uppercase;
 }
 
-.weather-forecast-icon {
-  text-align: center;
-}
-
-#weather-forecast-icon img {
-  width: 74px;
-  height: 74px;
+.forecast-icon {
+  display: block;
+  margin: 0 auto;
+  width: 75px;
+  height: 75px;
 }
 
 .forecast-temps {
