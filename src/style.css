@@ -1,0 +1,122 @@
+body {
+  background-color: #494e60;
+  color: #d4d5d9;
+  font-family: "Montserrat", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: #bf8240;
+}
+a:hover {
+  color: #1b7fb3;
+}
+
+.weather-container {
+  max-width: 600px;
+  margin: 30px auto;
+  padding: 20px;
+  border-radius: 10px;
+  background: rgb(97, 105, 119);
+  background: linear-gradient(180deg, rgba(97, 105, 119, 1) 0%, rgba(59, 65, 81, 1) 100%);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.header-search {
+  padding: 0px 0px;
+  margin-bottom: 30px;
+}
+.search-form-input {
+  background-color: #e4e4e1;
+  border: solid 1px #8698a0;
+  font-size: 12px;
+  padding: 10px;
+  border-radius: 10px;
+  width: 489px;
+}
+
+.search-form-button {
+  margin-left: 5px;
+  font-size: 12px;
+  background-color: #494e60;
+  color: #ffffff;
+  border: none;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.search-form-button:hover {
+  background-color: #d4d5d9;
+  color: #494e60;
+  cursor: pointer;
+  transition: all 500ms ease;
+}
+
+.footer-element {
+  text-align: center;
+  font-size: 9px;
+  text-transform: uppercase;
+  font-weight: 600;
+  padding: 0px;
+  letter-spacing: 1px;
+}
+.current-main {
+  text-align: center;
+}
+
+.current-city {
+  font-size: 46px;
+  margin: 0px;
+  letter-spacing: 2px;
+  overflow-wrap: break-word;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+.current-when {
+  margin: 10px auto;
+  font-size: 12px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border-bottom: solid 1px #616977;
+  width: 50%;
+  padding-bottom: 20px;
+}
+
+.current-temp-container {
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.weather-icon {
+  width: 80px;
+  height: 80px;
+  margin-top: 10px;
+}
+
+.current-temp-value {
+  font-size: 90px;
+  font-weight: 300;
+}
+
+.current-temp-unit {
+  font-size: 20px;
+  margin-top: 30px;
+}
+
+.current-extra {
+  text-align: center;
+  border-bottom: solid 1px #616977;
+  padding-bottom: 20px;
+}
+
+.current-details strong {
+  color: #e7eaee;
+}
+
+.forecast-container {
+  padding: 20px;
+  margin: 10px auto;
+  border-radius: 30px;
+}
