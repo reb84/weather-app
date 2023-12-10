@@ -61,6 +61,34 @@ function formatDate(date) {
   return `${formattedDay}  -   ${currentDate} ${formattedMonth}  -  ${currentHour}:${currentMinute}`;
 }
 
+function displayForecast() {
+  let days = ["Tue", "Wed", "Thu", "Fri", "Sat"];
+  let forecastHtml = "";
+
+  days.forEach(function (day) {
+    forecastHtml =
+      forecastHtml +
+      `
+  <div class="weather-forecast-day">
+          <div class="weather-forecast-date">${day}</div>
+          <div class="weather-forecast-icon">
+            <img src="https://shecodes-assets.s3.amazonaws.com/api/weather/icons/rain-day.png" />
+          </div>
+          <div class="forecast-temps">
+            <div class="weather-forecast-temperature">
+              <span class="weather-temp-max">15º</span>
+              /
+              <span class="weather-temp-min">9º</span>
+            </div>
+          </div>
+        </div>
+    `;
+  });
+
+  let forecastElement = document.querySelector("#forecast");
+  forecastElement.innerHTML = forecastHtml;
+}
+
 function citySearchSubmit(event) {
   event.preventDefault();
   let searchInput = document.querySelector("#search-form-input");
@@ -69,4 +97,6 @@ function citySearchSubmit(event) {
 
 let searchCityForm = document.querySelector("#search-form");
 searchCityForm.addEventListener("submit", citySearchSubmit);
+
 searchCity("London");
+displayForecast();
