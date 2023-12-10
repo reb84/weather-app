@@ -116,7 +116,9 @@ a:hover {
 }
 
 .forecast-container {
+  background-color: #494e60;
+  margin: 20px auto;
   padding: 20px;
-  margin: 10px auto;
-  border-radius: 30px;
+  border-radius: 10px;
+  opacity: 0.8;
 }
