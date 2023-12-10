@@ -154,7 +154,7 @@ a:hover {
   text-align: center;
 }
 
-.weather-forecast-icon img {
+#weather-forecast-icon img {
   width: 74px;
   height: 74px;
 }

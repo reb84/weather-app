@@ -1,10 +1,3 @@
-function searchCity(city) {
-  let apiKey = "22de0057ea42aa649cbcof0e3b1te784";
-  let unit = "metric";
-  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&units=${unit}&key=${apiKey}`;
-  axios.get(apiUrl).then(showWeather);
-}
-
 function showWeather(response) {
   let cityResult = document.querySelector("#current-city");
   let temperature = response.data.temperature.current;
@@ -23,6 +16,14 @@ function showWeather(response) {
   windHumidityElement.innerHTML = `${response.data.temperature.humidity}%`;
   currentLocalDate.innerHTML = formatDate(localDate);
   iconElement.innerHTML = `<img src="${response.data.condition.icon_url}" class="weather-icon" />`;
+
+  getForecast(response.data.city);
+}
+
+function searchCity(city) {
+  let apiKey = "22de0057ea42aa649cbcof0e3b1te784";
+  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(showWeather);
 }
 
 function formatDate(date) {
@@ -61,7 +62,14 @@ function formatDate(date) {
   return `${formattedDay}  -   ${currentDate} ${formattedMonth}  -  ${currentHour}:${currentMinute}`;
 }
 
-function displayForecast() {
+function getForecast(city) {
+  let apiKey = "22de0057ea42aa649cbcof0e3b1te784";
+  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=metric`;
+  axios(apiUrl).then(displayForecast);
+}
+
+function displayForecast(response) {
+  console.log(response.data);
   let days = ["Tue", "Wed", "Thu", "Fri", "Sat"];
   let forecastHtml = "";
 
@@ -71,9 +79,7 @@ function displayForecast() {
       `
   <div class="weather-forecast-day">
           <div class="weather-forecast-date">${day}</div>
-          <div class="weather-forecast-icon">
-            <img src="https://shecodes-assets.s3.amazonaws.com/api/weather/icons/rain-day.png" />
-          </div>
+<div id="weather-forecast-icon"><img src="https://shecodes-assets.s3.amazonaws.com/api/weather/icons/rain-day.png" /></div>
           <div class="forecast-temps">
             <div class="weather-forecast-temperature">
               <span class="weather-temp-max">15º</span>
@@ -99,4 +105,3 @@ let searchCityForm = document.querySelector("#search-form");
 searchCityForm.addEventListener("submit", citySearchSubmit);
 
 searchCity("London");
-displayForecast();
