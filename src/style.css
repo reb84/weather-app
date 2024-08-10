@@ -120,6 +120,7 @@ a:hover {
   justify-content: space-around;
   margin-top: 30px;
   font-size: 16px;
+  text-align: center;
 }
 
 .weather-forecast-day {
@@ -135,7 +136,6 @@ a:hover {
 }
 
 .weather-forecast-date {
-  text-align: center;
   line-height: 20px;
   margin-bottom: 10px;
   letter-spacing: 1px;
@@ -143,15 +143,11 @@ a:hover {
   text-transform: uppercase;
 }
 
-.forecast-icon {
-  display: block;
-  margin: 0 auto;
+.forecast-icon img {
   width: 75px;
-  height: 75px;
 }
 
 .forecast-temps {
-  text-align: center;
   margin-top: 10px;
   display: flex;
   justify-content: center;
@@ -169,9 +165,6 @@ a:hover {
 }
 
 @media screen and (max-width: 640px) {
-  .header-search {
-  }
-
   .search-form-input {
     width: 100%;
     margin: 0 auto;
@@ -180,5 +173,39 @@ a:hover {
   .search-form-button {
     width: 100%;
     margin: 10px auto;
+  }
+
+  .weather-forecast {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .weather-forecast-day {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    margin: 5px 0;
+    padding: 10px 0;
+    min-width: 200px;
+  }
+
+  .weather-forecast-date {
+    margin-top: 10px;
+    align-items: center;
+    width: 100px;
+  }
+
+  .forecast-icon {
+    width: 100px;
+  }
+
+  .forecast-temps {
+    margin-top: 0px;
+    width: 100px;
+  }
+
+  .footer-element {
+    padding: 10px 20px;
   }
 }
