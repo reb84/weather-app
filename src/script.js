@@ -20,10 +20,14 @@ function showWeather(response) {
   getForecast(response.data.city);
 }
 
+function handleError(error) {
+  alert("City not found. Please check the spelling and try again.");
+}
+
 function searchCity(city) {
   let apiKey = "22de0057ea42aa649cbcof0e3b1te784";
   let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
-  axios.get(apiUrl).then(showWeather);
+  axios.get(apiUrl).then(showWeather).catch(handleError);
 }
 
 function formatDate(date) {
